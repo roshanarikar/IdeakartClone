@@ -1,4 +1,3 @@
-
 # Ideakart - Unit 5 React Project
 
 Ideakart is a site that gives u an idea about the book you want to buy. We offer a huge collection of books in diverse categories.
@@ -12,10 +11,12 @@ We have a user friendly search engine and a quick delivery system. With this we 
 
 SnapShots
 
-![Photo](./cloneIdeaCart/my-app/src/components/Readme%20data/snap1.png)
-![Photo](./cloneIdeaCart/my-app/src/components/Readme%20data/snap2.png)
-![Photo](./cloneIdeaCart/my-app/src/components/Readme%20data/snap3.png)
-![Photo](./cloneIdeaCart/my-app/src/components/Readme%20data/snap4.png)
+![Photo](https://github.com/roshanarikar/IdeaCartClone/blob/main/cloneIdeaCart/my-app/src/components/Readme%20data/snap1.png?raw=true)
+![Photo](https://github.com/roshanarikar/IdeaCartClone/blob/main/cloneIdeaCart/my-app/src/components/Readme%20data/snap2.png?raw=true)
+![Photo](https://github.com/roshanarikar/IdeaCartClone/blob/main/cloneIdeaCart/my-app/src/components/Readme%20data/snap3.png?raw=true)
+![Photo](https://github.com/roshanarikar/IdeaCartClone/blob/main/cloneIdeaCart/my-app/src/components/Readme%20data/snap4.png?raw=true)
+
+
 
 ## Authors
 
@@ -23,7 +24,6 @@ SnapShots
 - [Jyotiranjan Das](https://github.com/jyotiranjan98)
 - [Madhusudan Sharma](https://github.com/msharmasharma)
 - [Roshan Arikar ](https://github.com/roshanarikar)
-- [Sharan M](https://github.com/)
 
 
 
@@ -36,7 +36,7 @@ SnapShots
 
 ## Demo
 
-Github repo link:-  https://github.com/roshanarikar/IdeaCart-Clone
+Github repo link:-  https://github.com/msharmasharma/IdeaCartClone
 
 Deployed Link:-  
 

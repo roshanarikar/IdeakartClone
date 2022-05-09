@@ -38,12 +38,15 @@ export const Navbar = () => {
     }
   `;
 
-  const [inValue, setInValue] = useState("");
+  const [inValue, setInValue] = useState([]);
+
+  const showText = (value)=>{
+    setInValue(value)
+  }
   console.log(inValue);
 
-  const handleClick = () => {
-    alert("hello");
-  };
+
+
   return (
     <div>
       <Nav>
@@ -57,10 +60,10 @@ export const Navbar = () => {
           }}
           to="/"
         >
-          IDEACART
+          IDEAKART
         </Link>
 
-        <Input />
+        <Input getText={showText} />
 
         <Link
           style={{

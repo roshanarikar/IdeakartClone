@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 export const ProductDescription = () => {
@@ -46,11 +46,18 @@ export const ProductDescription = () => {
   `;
   const [showData, setShowData] = useState([]);
   const { id } = useParams();
+
   useEffect(() => {
-    axios.get(`http://localhost:8080/products/${id}`).then(({ data }) => {
-      setShowData(data);
-    });
+    axios
+      .get(`https://ideakartitems.herokuapp.com/products/${id}`)
+      .then(({ data }) => {
+        setShowData(data);
+      });
   }, []);
+
+  const handleClick = () => {
+    window.location.href = `https://www.amazon.com/s?k=${showData.name}&crid=3UL1PKPVZJYBZ&sprefix=${showData.name}%2Caps%2C564&ref=nb_sb_noss_2`;
+  };
 
   return (
     <div style={{ marginTop: "4%", marginBottom: "30%" }}>
@@ -80,6 +87,7 @@ export const ProductDescription = () => {
                   fontSize: "16px",
                   paddingTop: "3%",
                 }}
+                onClick={handleClick}
               >
                 Buy Now
               </button>{" "}
@@ -121,18 +129,26 @@ export const ProductDescription = () => {
             <div style={{ textAlign: "left" }}>
               <span>Store</span> &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;
               &ensp;&ensp; &ensp; &ensp; &ensp; &ensp;&ensp; &ensp; &ensp;
-              &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;&ensp; &ensp;&ensp;<span>Price</span> &ensp;
-              &ensp; &ensp; &ensp; &ensp; &ensp;&ensp;&ensp; &ensp; &ensp;
-              &ensp; &ensp;&ensp;&ensp; &ensp; &ensp; &ensp; &ensp;&ensp;&ensp;
-              &ensp;<span>Buy Now</span>
+              &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;&ensp;
+              &ensp;&ensp;<span>Price</span> &ensp; &ensp; &ensp; &ensp; &ensp;
+              &ensp;&ensp;&ensp; &ensp; &ensp; &ensp; &ensp;&ensp;&ensp; &ensp;
+              &ensp; &ensp; &ensp;&ensp;&ensp; &ensp;<span>Buy Now</span>
             </div>
             <hr />
-            <div style={{ textAlign: "left" ,  backgroundColor:"#ebebeb",height:"60px",marginTop:"-1%"}}>
+            <div
+              style={{
+                textAlign: "left",
+                backgroundColor: "#ebebeb",
+                height: "60px",
+                marginTop: "-1%",
+              }}
+            >
               <span>Amazon, Paperback Bunko </span> &ensp; &ensp; &ensp; &ensp;
-              &ensp; &ensp; &ensp;&ensp; &ensp; &ensp; &ensp; &ensp;&ensp; <span>{showData.price}</span> &ensp; &ensp;
-              &ensp; &ensp; &ensp; &ensp; &ensp;&ensp; &ensp; &ensp; &ensp;
-              &ensp;&ensp;&ensp; &ensp; &ensp; &ensp; &ensp;&ensp;&ensp; &ensp;
-              <button>Buy Now</button>
+              &ensp; &ensp; &ensp;&ensp; &ensp; &ensp; &ensp; &ensp;&ensp;{" "}
+              <span>{showData.price}</span> &ensp; &ensp; &ensp; &ensp; &ensp;
+              &ensp; &ensp;&ensp; &ensp; &ensp; &ensp; &ensp;&ensp;&ensp; &ensp;
+              &ensp; &ensp; &ensp;&ensp;&ensp; &ensp;
+              <button onClick={handleClick}>Buy Now</button>
             </div>
           </div>
         </div>
